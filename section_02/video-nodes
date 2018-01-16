@@ -92,3 +92,12 @@ console.log(num2)
 - objects doesn't have this behavior
 - instead object uses pointers to the value
 - prevent with const newPerson = {...oldPerson};
+
+refreshing array functions:
+
+const numbers = [1,2,3,4];
+const doubleNum = numbers.map((num) => {
+  return num * 2;
+});
+console.log(numbers);
+console.log(doubleNum);

@@ -21,13 +21,22 @@ class App extends Component {
       ]
     });
   }
+  switchAgeHandler = (newAge) => {
+    this.setState({
+      persons : [
+        {name: "Felix", age: newAge},
+        {name: "Claus", age: 22},
+        {name: "Vivien", age: 25}
+      ]
+    });
+  }
 
   render() {
     return (
       <div className="App">
         <h1>Hi, Im a React Developer</h1>
-        <p>This is really working.</p>
         <button onClick={() => this.switchNameHandler("Pascal")}>Switch Name</button>
+        <button onClick={() => this.switchAgeHandler("29")}>Switch Age</button>
         <Person
           name={this.state.persons[0].name}
           age={this.state.persons[0].age}
@@ -40,6 +49,7 @@ class App extends Component {
         <Person
           name={this.state.persons[2].name}
           age={this.state.persons[2].age}
+          click={this.switchAgeHandler.bind(this, "22")}
         />
       </div>
     );

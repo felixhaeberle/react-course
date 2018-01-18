@@ -30,13 +30,23 @@ class App extends Component {
       ]
     });
   }
+  switchAgeNameHandler = (newName, newAge) => {
+    this.setState({
+      persons : [
+        {name: "Felix", age: newAge},
+        {name: "Claus", age: 22},
+        {name: "Vivien", age: 25}
+      ]
+    });
+  }
 
   render() {
     return (
       <div className="App">
         <h1>Hi, Im a React Developer</h1>
         <button onClick={() => this.switchNameHandler("Pascal")}>Switch Name</button>
-        <button onClick={() => this.switchAgeHandler("29")}>Switch Age</button>
+        <button onClick={() => this.switchAgeHandler(29)}>Switch Age</button>
+        <button onClick={() => this.switchAgeNameHandler("Xavier", 35)}>Switch Name and age</button>
         <Person
           name={this.state.persons[0].name}
           age={this.state.persons[0].age}

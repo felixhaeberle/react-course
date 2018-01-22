@@ -7,9 +7,9 @@ import './Person/Person.css';
 class App extends Component {
   state = {
     persons : [
-      {name: "Felix", age: 22},
-      {name: "David", age: 28},
-      {name: "Sarah", age: 23}
+      {id: 'fdgdfg', name: "Felix", age: 22},
+      {id: 'nhggh', name: "David", age: 28},
+      {id: 'gbdbgb', name: "Sarah", age: 23}
     ],
     otherState: "an other state",
     showPersons: false,
@@ -26,9 +26,9 @@ class App extends Component {
   }
 
   deletePersonHandler = (personIndex) => {
-    const persons = this.state.persons;
+    const persons = [...this.state.persons];
     persons.splice(personIndex, 1);
-    this.setState({person: persons});
+    this.setState({persons: persons});
   }
 
   togglePersonsHandler = () => {
@@ -54,7 +54,8 @@ class App extends Component {
             return <Person
               click={() => this.deletePersonHandler(index)}
               name={person.name}
-              age={person.age} />
+              age={person.age}
+              key={person.id}/>
           })}
         </div>
       );
@@ -66,7 +67,7 @@ class App extends Component {
         <button
           style={style}
           onClick={this.togglePersonsHandler}>
-          Switch Name
+          Toggle Persons
         </button>
         {persons}
       </div>

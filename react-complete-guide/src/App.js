@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Person from './Person/Person';
 import './Person/Person.css';
-import Radium, { StyleRoot } from 'radium';
 
 
 class App extends Component {
@@ -47,11 +46,7 @@ class App extends Component {
       color: 'white',
       border: '2px solid blue',
       padding: '8px',
-      cursor: 'pointer',
-      ':hover': {
-        backgroundColor: 'lightgreen',
-        color: 'black'
-      }
+      cursor: 'pointer'
     };
 
     let persons = null;
@@ -71,10 +66,6 @@ class App extends Component {
       );
 
       style.backgroundColor = 'red';
-      style[':hover'] = {
-        backgroundColor: 'salmon',
-        color: 'black'
-      }
     }
 
     let classes = [];
@@ -86,7 +77,6 @@ class App extends Component {
     }
 
     return (
-      <StyleRoot>
       <div className="App">
         <h1>React</h1>
         <p className={classes.join(' ')}>This is really working!</p>
@@ -97,9 +87,8 @@ class App extends Component {
         </button>
         {persons}
       </div>
-      </StyleRoot>
     );
   }
 }
 
-export default Radium(App);
+export default App;

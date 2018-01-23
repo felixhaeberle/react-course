@@ -15,7 +15,6 @@ class App extends Component {
       {id: 'nhggh', name: "David", age: 28},
       {id: 'gbdbgb', name: "Sarah", age: 23}
     ],
-    otherState: "an other state",
     showPersons: false,
   };
 

@@ -1,13 +1,14 @@
 import React from "react";
+
 import classes from './Cockpit.css';
 
 const cockpit = (props) => {
+
     let assignedClasses = [];
     let btnClass = '';
     if (props.showPersons) {
       btnClass = classes.Red;
     }
-
     if (props.persons.length <= 2) {
       assignedClasses.push(classes.red);
     }

@@ -42,6 +42,8 @@ class App extends Component {
     this.setState({showPersons: !doesShow});
   }
 
+  componentWillMount();
+
   render() {
     let persons = null;
     if (this.state.showPersons) {

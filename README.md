@@ -20,3 +20,5 @@ The course covers the following subjects:
 - ...and much more!
 
 If you are also interested in doing this course feel free to give it a look at https://www.udemy.com/react-the-complete-guide-incl-redux/
+
+## Helpful React sources

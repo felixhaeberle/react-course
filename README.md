@@ -23,4 +23,13 @@ If you are also interested in doing this course feel free to give it a look at h
 
 ## Helpful React sources
 
-More on helpful React sources soon..
+English:
+https://reactjs.org/
+https://reactjs.org/tutorial/tutorial.html
+https://redux.js.org/
+http://graphql.org/
+http://graphql.org/learn/
+
+German:
+https://www.heise.de/developer/artikel/JavaScript-Einfuehrung-in-React-2689175.html?seite=all
+http://reactjs.de/posts/react-tutorial

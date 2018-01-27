@@ -6,14 +6,26 @@ import Person from '../components/Persons/Person/Person';
 import '../components/Persons/Person/Person.css';
 
 class App extends Component {
-  state = {
-    persons : [
-      {id: 'fdgdfg', name: "Felix", age: 22},
-      {id: 'nhggh', name: "David", age: 28},
-      {id: 'gbdbgb', name: "Sarah", age: 23}
-    ],
-    showPersons: false,
-  };
+  constructor(props) {
+    super(props);
+    console.log('AppJS inside constructor', props);
+    this.state = {
+      persons : [
+        {id: 'fdgdfg', name: "Felix", age: 22},
+        {id: 'nhggh', name: "David", age: 28},
+        {id: 'gbdbgb', name: "Sarah", age: 23}
+      ],
+      showPersons: false,
+    };
+  }
+
+  componentWillMount() {
+    console.log('AppJS inside componentWillMount');
+  }
+
+  componentDidMount() {
+    console.log('AppJS inside componentDidMount');
+  }
 
   nameChangedHandler = (event, id) => {
     const personIndex = this.state.persons.findIndex(p => {
@@ -40,6 +52,8 @@ class App extends Component {
   }
 
   render() {
+    console.log('AppJS inside render');
+
     let persons = null;
     if (this.state.showPersons) {
       persons = (

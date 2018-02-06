@@ -33,3 +33,4 @@ http://graphql.org/learn/
 German:
 https://www.heise.de/developer/artikel/JavaScript-Einfuehrung-in-React-2689175.html?seite=all
 http://reactjs.de/posts/react-tutorial
+https://blog.dirk-helbert.de/blog/2017/05/12/reactjs-anfaenger-tutorial/
